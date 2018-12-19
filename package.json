@@ -3,11 +3,19 @@
     "displayName": "CODEOWNERS language",
     "description": "Syntax highlighting for CODEOWNERS files",
     "version": "0.0.1",
+    "license": "UNLICENSE",
+    "publisher": "bmalehorn",
+    "repository": {
+        "url": "https://github.com/bmalehorn/codeowners-language"
+    },
     "engines": {
         "vscode": "^1.30.0"
     },
     "categories": [
-        "Other"
+        "Programming Languages"
+    ],
+    "keywords": [
+        "codeowners"
     ],
     "activationEvents": [
         "onCommand:extension.sayHello"
@@ -18,6 +26,22 @@
             {
                 "command": "extension.sayHello",
                 "title": "Hello World"
+            }
+        ],
+        "languages": [
+            {
+                "id": "codeowners",
+                "aliases": [
+                    "codeowners",
+                    "CODEOWNERS"
+                ],
+                "extensions": [
+                    "CODEOWNERS"
+                ],
+                "filenames": [
+                    "CODEOWNERS"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ]
     },
