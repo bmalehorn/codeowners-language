@@ -2,7 +2,7 @@
     "name": "codeowners-language",
     "displayName": "CODEOWNERS language",
     "description": "Syntax highlighting for CODEOWNERS files",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "license": "UNLICENSE",
     "publisher": "bmalehorn",
     "repository": {
@@ -22,12 +22,6 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ],
         "languages": [
             {
                 "id": "codeowners",
@@ -42,6 +36,13 @@
                     "CODEOWNERS"
                 ],
                 "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "codeowners",
+                "scopeName": "text.codeowners",
+                "path": "./syntaxes/codeowners.tmLanguage.json"
             }
         ]
     },

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bmalehorn/codeowners-language/master/syntaxes/codeowners.tmLanguage.json",
+  "name": "codeowners",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#pattern"
+    },
+    {
+      "include": "#owner"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "^\\s*#",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.codeowners"
+            }
+          },
+          "end": "$",
+          "name": "comment.line.codeowners"
+        }
+      ]
+    },
+    "pattern": {
+      "match": "^\\s*(\\S+)",
+      "name": "variable.other.codeowners"
+    },
+    "owner": {
+      "match": "\\S*@\\S+",
+      "name": "storage.type.function.codeowners"
+    }
+ },
+  "scopeName": "text.codeowners"
+}
